@@ -6,7 +6,8 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    video: true, //  set true to record videos
-    // videoCompression: 32,
+    video: true,  // Enable video recording (default is true)
+    videosFolder: 'cypress/videos',  // Where videos are saved
+    videoCompression: 32,  
   },
 });
