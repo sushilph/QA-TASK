@@ -6,13 +6,21 @@ on: [push, pull_request]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Cypress run
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          build: npm install
-          start: npm start
-          wait-on: 'http://localhost:3000'
+          browser: chrome
+          headless: true
