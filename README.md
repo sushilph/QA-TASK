@@ -36,14 +36,29 @@ Website tested: https://www.saucedemo.com/
 - Complete checkout process
 - Verify order success message
 
----
 
 ## Project Structure
-cypress/
-└── e2e/
-├── login.cy.js
-├── cart.cy.js
-└── checkout.cy.js
-└── support/
-├── commands.js
-└── e2e.js
+```
+Q A- Task final/
+├── .github/
+│   └── workflows/           # GitHub Actions CI/CD workflows
+├── cypress/
+│   ├── e2e/                # End-to-end test files
+│   │   ├── cart.cy.js
+│   │   ├── checkout.cy.js
+│   │   └── login.cy.js
+│   ├── fixtures/           # Test data and mock files
+│   ├── support/            # Custom commands and configurations
+│   │   ├── commands.js     # Custom Cypress commands
+│   │   └── e2e.js          # Support file for e2e tests
+│   └── videos/             # Recorded test execution videos
+│       ├── cart.cy.js.mp4
+│       ├── checkout.cy.js.mp4
+│       └── login.cy.js.mp4
+├── node_modules/           # Project dependencies
+├── .gitignore              # Git ignore rules
+├── cypress.config.js       # Cypress configuration
+├── package-lock.json       # Locked dependency versions
+├── package.json            # Project dependencies and scripts
+└── README.md               # Project documentation
+```
